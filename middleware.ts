@@ -4,9 +4,8 @@ import { NextResponse } from "next/server";
 export default withAuth(
   function middleware(req) {
     const { token } = req.nextauth;
-
     const isAdminPage = req.nextUrl.pathname.startsWith("/admin");
-
+//Admin sayfasına erişim kontrolü
     if (isAdminPage && token?.role !== "admin") {
       return NextResponse.redirect(new URL("/unauthorized", req.url));
     }
@@ -15,14 +14,14 @@ export default withAuth(
   },
   {
     callbacks: {
-      authorized: ({ token }) => !!token, // sadece giriş yapmış kullanıcılar geçebilir
+      authorized: ({ token }) => !!token, 
     },
     pages: {
-      signIn: "/login", // giriş yapmamışsa yönlendir
+      signIn: "/login", 
     },
   }
 );
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/admin/:path*"], // korunan tüm route'lar burada
+  matcher: ["/dashboard/:path*", "/admin/:path*"], 
 };

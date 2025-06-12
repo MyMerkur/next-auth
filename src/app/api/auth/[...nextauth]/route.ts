@@ -9,6 +9,7 @@ const handler = NextAuth({
       issuer: process.env.AUTH0_ISSUER,
     }),
   ],
+  // JWT ayarı
   secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
