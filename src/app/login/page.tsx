@@ -1,22 +1,3 @@
-// 'use client';
-
-// import { signIn } from "next-auth/react";
-
-// export default function LoginPage() {
-//   return (
-//     <div className="h-screen flex items-center justify-center">
-//       {/* Auth0 ile giriş yap butonu */}
-//       <button
-//         onClick={() => signIn("auth0")}
-//         className="bg-blue-600 text-white px-6 py-3 rounded"
-//       >
-//         Auth0 ile Giriş Yap
-//       </button>
-//     </div>
-//   );
-// }
-
-
 'use client';
 
 import { signIn } from 'next-auth/react';
@@ -36,6 +17,7 @@ export default function LoginPage() {
   };
 
   return (
+    
     <div className="h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-semibold mb-6 text-center">Giriş Yap</h2>
