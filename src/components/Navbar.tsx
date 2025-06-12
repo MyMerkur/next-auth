@@ -7,10 +7,11 @@ export default function Navbar() {
     const { data: session, status } = useSession();
 
     const handleLogout = () => {
+        // Auth0 gerekli parametreler
         const domain = process.env.NEXT_PUBLIC_AUTH0_DOMAIN;
         const clientId = process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID;
         const returnTo = 'http://localhost:3000';
-
+        // Auth0 çıkış url
         const logoutUrl = `${domain}/v2/logout?client_id=${clientId}&returnTo=${encodeURIComponent(returnTo)}`;
 
         signOut({
