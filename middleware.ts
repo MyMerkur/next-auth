@@ -13,6 +13,7 @@ export default withAuth(
     return NextResponse.next();
   },
   {
+    // JWT ayarları
     callbacks: {
       authorized: ({ token }) => !!token, 
     },
