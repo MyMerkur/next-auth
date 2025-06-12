@@ -1,3 +1,21 @@
+# Next.js Auth0 + NextAuth.js Projesi
+
+## Kimlik Doğrulama
+- Auth0 üzerinden giriş
+- JWT ile oturum yönetimi
+- Rol bazlı yetkilendirme
+
+## Yetkilendirme
+- `/dashboard` sadece giriş yapanlara açık
+- `admin` kullanıcılar için özel erişim
+
+## Teknolojiler
+- Next.js 15
+- TailwindCSS
+- NextAuth.js
+- Auth0
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
